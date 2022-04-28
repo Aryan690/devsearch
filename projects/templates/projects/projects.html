@@ -1,6 +1,6 @@
 {% extends 'main.html' %} {% block content %}
 
-<table>
+<!-- <table>
   {% for project in projects%}
   <tr>
     <td><a href="{% url 'update-project' project.id %}">Edit</a></td>
@@ -8,7 +8,7 @@
     <td><a href="{% url 'project' project.id %}">View</a></td>
   </tr>
   {% endfor %}
-</table>
+</table> -->
 <!-- Main Section -->
 <main class="projects">
   <section class="hero-section text-center">
@@ -55,12 +55,12 @@
                   <a
                     class="project__author"
                     href="{% url 'project' project.id %}"
-                    >By Dennis Ivanov</a
+                    >By {{project.owner.name}}</a
                   >
                 </p>
                 <p class="project--rating">
                   <span style="font-weight: bold">{{project.vote_ratio}}%</span>
-                  Postitive Feedback ({{project.vote_total}} Vote{{project.vote_total | pluralize:"s"}})
+                  Postitive Feedback ({{project.vote_total}}) Vote{{project.vote_total | pluralize:"s"}}
                 </p>
                 <div class="project__tags">
                   {% for tag in project.tags.all %}
