@@ -3,7 +3,7 @@ import uuid
 from django.db import models
 from django.forms import UUIDField
 from users.models import Profile
-# Create your models here.
+
 
 
 class Project(models.Model):
@@ -49,3 +49,5 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+
+
