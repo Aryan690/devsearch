@@ -1,31 +1,43 @@
+from turtle import right
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Project, Tag
-from .forms import ProjectForm
+from .models import Project, Review, Tag
+from .forms import ProjectForm, ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .utils import searchProject
-from django.core.paginator import Paginator
+from django.contrib import messages
+from .utils import paginateProjects, searchProjects
+
 # Create your views here.
 
 
 def projects(request):
-    projects, text = searchProject(request)
+    projects, search_query = searchProjects(request)
 
-    page = request.GET.get('page')
-    results = 3
-    paginator = Paginator(projects, results)
+    custom_range, projects = paginateProjects(request, projects, 6)
 
-    projects = paginator.page(page)
-
-    context = {'projects': projects, 'text':text}
+    context = {'projects': projects, 'search_query':search_query, 'custom_range':custom_range}
     return render(request, 'projects/projects.html', context)
 
 
 def project(request, pk):
     projectObj = Project.objects.get(id=pk)
-    print('projectObj:', projectObj)
-    return render(request, 'projects/single-project.html', {'project': projectObj})
+    form = ReviewForm()
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        review = form.save(commit=False)
+        review.project = projectObj
+        review.owner = request.user.profile
+        review.save()
+        
+        #update project vote count
+        projectObj.getVoteCount
+
+        messages.success(request, 'Your review was successfully submitted!')
+        return redirect('project', pk=projectObj.id)
+
+    return render(request, 'projects/single-project.html', {'project': projectObj, 'form':form})
 
 @login_required(login_url='login')
 def createProject(request):
