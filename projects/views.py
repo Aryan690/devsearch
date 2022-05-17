@@ -62,6 +62,9 @@ def updateProject(request, pk):
     form = ProjectForm(instance=project)
 
     if request.method == 'POST':
+        newtags = request.POST.get('newtags').split()
+        print('DATA: ', newtags)
+
         form = ProjectForm(request.POST, request.FILES, instance=project)
         if form.is_valid():
             form.save()
