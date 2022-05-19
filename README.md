@@ -41,16 +41,18 @@ cd devSearch
 pip install - r requirements.txt
 ```
 
-Go to the `setting.py` and change this lines up to your PostgreSQL account
+Create a `.env` file in the root of your Django-project, add a key like;
+`SECRET_KEY=SomeSecretKeyHere`
+
 ```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'devSearch',
-        'HOST': 'localhost',
+        'NAME': 'devsearch',
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
         'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': ENV['DB_PASS']
     }
 }
 ```
@@ -65,8 +67,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = ENV['EMAIL']
-EMAIL_HOST_PASSWORD = ENV['EMAIL_PASS']
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 ```
 
 Then you can run it
