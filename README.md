@@ -5,8 +5,8 @@
 - PostgreSQL
 - HTML / CSS
 
-### Developer Staff
-- [h4cktivist](https://github.com/h4cktivist)
+### Developed By
+- [aryansetia](https://github.com/aryansetia)
 - Templates for frontend were taken from [divanov11/Django-2021](https://github.com/divanov11/Django-2021)
 
 ### Website Features
