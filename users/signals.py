@@ -17,9 +17,16 @@ def createProfile(sender, instance, created, **kwargs):
             
 
 def deleteUser(sender, instance, **kwargs):
-    user = instance.user
-    user.delete()
-    print('Deleting user...')
+
+    try:
+        user = instance.user
+        user.delete()
+        print('Deleting user...')
+    except:
+        pass
+
+
+
 
 def updateUser(sender, instance, created, **kwargs):
     profile = instance
