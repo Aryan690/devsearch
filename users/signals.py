@@ -37,16 +37,16 @@ def updateUser(sender, instance, created, **kwargs):
         user.email = profile.email
         user.save()
 
-    subject = 'Welcome to DevSearch'
-    message = 'We are glad you are here!'
+    # subject = 'Welcome to DevSearch'
+    # message = 'We are glad you are here!'
 
-    send_mail(
-        subject,
-        message,
-        settings.EMAIL_HOST_USER,
-        [profile.email],
-        fail_silently=False
-    )
+    # send_mail(
+    #     subject,
+    #     message,
+    #     settings.EMAIL_HOST_USER,
+    #     [profile.email],
+    #     fail_silently=False
+    # )
 
 
 post_save.connect(createProfile, sender=User)
