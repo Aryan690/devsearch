@@ -21,16 +21,17 @@
 
 ### Preview
 # Home Page
-<img src=".images/Devsearch Home.jpg">  
+
+<img src="./images/Devsearch Home.jpg">  
 
 # Projects Page
-<img src=".images/DevSearch Projects.jpg">  
+<img src="./images/DevSearch Projects.jpg">  
 
 # Profile Page
-<img src=".images/Devsearch Profile.jpg">  
+<img src="./images/Devsearch Profile.jpg">  
 
 # User Inbox
-<img src=".images/Devsearch Inbox.jpg">  
+<img src="./images/Devsearch Inbox.jpg">  
 
 
 ### Run it yourself
