@@ -1,6 +1,6 @@
-# DevSearch - Connect With Developers From Around The World!
+# Freelify - Connecting You with Expert Developers Globally!
 
-DevSearch is a dynamic platform designed to connect developers with projects and clients from around the globe. Whether you are a developer looking for your next gig or a project owner seeking skilled developers, DevSearch provides a seamless experience to meet your needs.
+Freelify is a dynamic platform designed to connect developers with projects and clients from around the globe. Whether you are a developer looking for your next gig or a project owner seeking skilled developers, DevSearch provides a seamless experience to meet your needs.s
 
 ### Technologies Stack
 - Django, Django Rest Framework
@@ -17,7 +17,7 @@ DevSearch is a dynamic platform designed to connect developers with projects and
 - Send messages to developers / Read your inbox messages
 - Reset password to your account via email
 
-### Preview
+<!-- ### Preview
 # Home Page
 
 <img src="./images/Devsearch Home.jpg">  
@@ -29,7 +29,7 @@ DevSearch is a dynamic platform designed to connect developers with projects and
 <img src="./images/Devsearch Profile.jpg">  
 
 # User Inbox
-<img src="./images/Devsearch Inbox.jpg">  
+<img src="./images/Devsearch Inbox.jpg">   -->
 
 
 ### Run it yourself
