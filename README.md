@@ -1,4 +1,6 @@
-# :computer: DevSearch - Connect With Developers From Around The World!
+# DevSearch - Connect With Developers From Around The World!
+
+DevSearch is a dynamic platform designed to connect developers with projects and clients from around the globe. Whether you are a developer looking for your next gig or a project owner seeking skilled developers, DevSearch provides a seamless experience to meet your needs.
 
 ### Technologies Stack
 - Django, Django Rest Framework
