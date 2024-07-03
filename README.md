@@ -1,13 +1,9 @@
 # :computer: DevSearch - Connect With Developers From Around The World!
 
 ### Technologies Stack
-- Django
+- Django, Django Rest Framework
 - PostgreSQL
-- HTML / CSS
-
-### Developed By
-- [aryansetia](https://github.com/aryansetia)
-- Templates for frontend were taken from [divanov11/Django-2021](https://github.com/divanov11/Django-2021)
+- HTML, CSS and Bootstrap
 
 ### Website Features
 - Browse and search for developers
