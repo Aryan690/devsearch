@@ -4,8 +4,8 @@ Freelify is a dynamic platform designed to connect developers with projects and 
 
 ### Technologies Stack
 - Django, Django Rest Framework
-- PostgreSQL
-- HTML, CSS and Bootstrap
+- PostgreSQL, AWS S3 Bucket Storage
+- Javascript, HTML, CSS and Bootstrap
 
 ### Website Features
 - Browse and search for developers
@@ -34,7 +34,7 @@ Freelify is a dynamic platform designed to connect developers with projects and 
 
 ### Run it yourself
 ```sh
-git clone https://github.com/h4cktivist/devSearch.git
+git clone https://github.com/aryansetia/freelify-rest-api.git
 cd devSearch
 pip install - r requirements.txt
 ```
